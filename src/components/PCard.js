@@ -1,13 +1,16 @@
-export default function PCard({ imgSrc, projTitle, projLink }) {
+export default function PCard({ projImgSrc, projTitle, projLink }) {
   return (
     <>
-      <div className="cards mx-2 my-4 sm:m-2 sm:min-h-[360px] flex bg-opacity-50 rounded-2xl basis-4/12 sm:basis-4/12 grow-0">
+      <div className="cards grid sm:min-h-[300px] sm:max-w-[420px] h-auto bg-opacity-50 rounded-xl">
         <figure className="cards-fig">
-          <img alt="Project thumbnail" loading="lazy" src={imgSrc} />
+          <img alt="Project thumbnail" loading="lazy" src={projImgSrc} />
         </figure>
         <div>
-          <p className="cards-desc text-sm sm:text-lg">{projTitle}</p>
-          <button className="cards-button sm:text-sm">
+          {/* <div className="hover:min-h-[27%]"> */}
+          <p className="cards-desc p-1 sm:p-2 text-sm sm:text-base max-h-[80%]">
+            {projTitle}
+          </p>
+          <button className="cards-button text-xs sm:text-sm font-medium">
             <a href={projLink} target="_blank" rel="noreferrer">
               visit
             </a>
