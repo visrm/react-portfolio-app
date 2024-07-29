@@ -3,7 +3,7 @@ import pfp from "./assets/user_profile.jpg";
 import C_assg from "./assets/C-Assignments-thumb.png";
 import Weather_fc from "./assets/weather-app-thumb.png";
 import Digi_gui from "./assets/digilocker-guide-thumb.png";
-import ProjectCard from "./components/PCard";
+import ProjectCard from "./components/ProjectCard";
 
 export default function App() {
   return (
@@ -13,37 +13,12 @@ export default function App() {
           <p className="flex px-4 sm:px-5 mx-2 text-center text-3xl font-extrabold tracking-wide">
             Portfolio
           </p>
-          <nav className="dropdown dropdown-left flex flex-row flex-nowrap h-16 justify-evenly">
-            <div
-              className="menu-button place-content-center px-1 mx-1"
-              id="menu-btn"
-              role="button"
-              tabIndex="0"
-            >
-              <svg
-                className="h-12 w-18"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 6h16M4 12h16M4 18h7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                />
-              </svg>
-            </div>
-            <ul
-              className="dropdown-content z-[1] menu p-1 shadow bg-base-100 rounded-box w-52 mx-4 flex-col flex-nowrap list-none"
-              id="dropdown-cont"
-              tabIndex="0"
-            >
-              <li className="sm:mx-1 p-2 basis-1/2 font-semibold text-lg text-black/50">
+          <nav className="flex p-2 h-16">
+            <ul className="z-[1] max-w-full mx-4 flex flex-row flex-nowrap gap-2 sm:gap-3 items-center list-none">
+              <li className="basis-1/2 font-medium text-sm sm:text-lg">
                 <a href="#project-bg">Projects</a>
               </li>
-              <li className="sm:mx-1 p-2 basis-1/2 font-semibold text-lg text-black/50">
+              <li className="basis-1/2 font-medium text-sm sm:text-lg">
                 <a href="#contact">Contact</a>
               </li>
             </ul>
@@ -79,8 +54,8 @@ export default function App() {
               </div>
             </article>
           </section>
-          <section className="m-0 py-2 sm:py-5 h-full sm:min-h-full">
-            <article className="sm:p-4 py-4 overflow-hidden" id="project-bg">
+          <section className="h-full min-h-fit w-full max-w-full">
+            <article className="p-4 overflow-hidden" id="projects">
               <ProjectCard
                 projImgSrc={Weather_fc}
                 projTitle="A simple Javascript Weather Forecaster."
@@ -103,6 +78,41 @@ export default function App() {
               <h2 className="mr-auto ml-auto p-2 sm:p-4 text-xl sm:text-2xl font-medium sm:tracking-wide uppercase">
                 Technical Skills
               </h2>
+              <div className="wrapper text-xs uppercase text-medium text-mono">
+                <div className="item" id="item1">
+                  <span>HTML</span>
+                </div>
+                <div className="item" id="item2">
+                  <span>CSS</span>
+                </div>
+                <div className="item" id="item3">
+                  <span>Tailwind CSS</span>
+                </div>
+                <div className="item" id="item4">
+                  <span>C/C++</span>
+                </div>
+                <div className="item" id="item5">
+                  <span>Java</span>
+                </div>
+                <div className="item" id="item6">
+                  <span>Python</span>
+                </div>
+                <div className="item" id="item7">
+                  <span>PHP</span>
+                </div>
+                <div className="item" id="item8">
+                  <span>SQL</span>
+                </div>
+                <div className="item" id="item9">
+                  <span>React.js</span>
+                </div>
+                <div className="item" id="item10">
+                  <span>Bootstrap</span>
+                </div>
+                <div className="item" id="item11">
+                  <span>JavaScript</span>
+                </div>
+              </div>
               <div className="skills-grid grid gap-4 sm:gap-6">
                 <article className="skills-grid-element">
                   <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-lg tracking-wide">

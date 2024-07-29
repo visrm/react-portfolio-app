@@ -22,7 +22,7 @@
   position: relative;
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
-  background-color: hsl(240, 10%, 4%, 0.95);
+  background-color: hsla(240, 10%, 4%, 0.95);
 }
 
 p {
@@ -81,17 +81,6 @@ img {
   }
 }
 
-/* Header button CSS */
-.menu-button {
-  padding: 8px;
-  min-height: fit-content;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  background-color: transparent;
-  /* border-radius: 5px; */
-}
-
 /* Profile card CSS */
 .hero {
   overflow: hidden;
@@ -99,7 +88,7 @@ img {
 
 /* Cards container CSS */
 
-#project-bg {
+#projects {
   display: grid;
   grid-auto-columns: 1fr;
   grid-template-areas:
@@ -112,27 +101,23 @@ img {
   z-index: -1;
 }
 
-#project-bg:nth-child(1) {
+#projects:nth-child(1) {
   grid-area: Project-1;
 }
-#project-bg:nth-child(2) {
+#projects:nth-child(2) {
   grid-area: Project-2;
 }
-#project-bg:nth-child(3) {
+#projects:nth-child(3) {
   grid-area: Project-3;
 }
 
-@media (min-width: 30em) {
-  #project-bg {
+@media (min-width: 50em) {
+  #projects {
     grid-template-areas: "Project-1 Project-2 Project-3";
   }
 }
 
 /* Cards CSS */
-.cards::before {
-  opacity: 0;
-}
-
 .cards {
   display: flex;
   position: relative;
@@ -142,16 +127,12 @@ img {
   justify-content: space-between;
   overflow: hidden;
   font-weight: 600;
-  background-color: hsl(240, 4%, 46%, 0.05);
+  background-color: hsla(240, 4%, 46%, 0.05);
   -webkit-box-shadow: 10px 5px 24px -5px #000000;
   -moz-box-shadow: 10px 5px 24px -5px #000000;
   box-shadow: 10px 5px 24px -5px #000000;
   transition: all 1s linear;
   z-index: 10;
-}
-
-.cards::after {
-  opacity: 1;
 }
 
 .cards > div {
@@ -205,11 +186,11 @@ img {
   box-shadow: rgba(0, 0, 0, 0.2) 0 3px 5px -1px,
     rgba(0, 0, 0, 0.14) 0 6px 10px 0, rgba(0, 0, 0, 0.12) 0 1px 18px 0;
   box-sizing: border-box;
-  color: #0d1717;
+  color: #000000;
   cursor: pointer;
   fill: currentcolor;
   font-family: "Google Sans", Roboto, Arial, sans-serif;
-  max-height: 32px;
+  max-height: 48px;
   letter-spacing: 0.25px;
   line-height: normal;
   max-width: 100%;
@@ -265,6 +246,97 @@ img {
 .cards-button:disabled {
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 3px 0,
     rgba(60, 64, 67, 0.15) 0 4px 8px 3px;
+}
+
+/* Marquee CSS */
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+.wrapper {
+  gap: 2rem;
+  box-sizing: border-box;
+  width: max(calc(4.5rem * 10), 85%);
+  margin-inline: auto;
+  position: relative;
+  height: 2.25rem;
+  min-height: fit-content;
+  margin-block-end: 1rem;
+  background-color: hsl(240, 8%, 5%);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: -webkit-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  mask-image: -moz-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  position: absolute;
+  width: 5rem;
+  height: 2rem;
+  border-radius: 6px;
+  left: 100%;
+  animation: scrollLeft 30s linear;
+  animation-iteration-count: infinite;
+}
+
+#item1 {
+  animation-delay: calc(30s / 11 * (11 - 1) * -1);
+}
+#item2 {
+  animation-delay: calc(30s / 11 * (11 - 2) * -1);
+}
+#item3 {
+  animation-delay: calc(30s / 11 * (11 - 3) * -1);
+}
+#item4 {
+  animation-delay: calc(30s / 11 * (11 - 4) * -1);
+}
+#item5 {
+  animation-delay: calc(30s / 11 * (11 - 5) * -1);
+}
+#item6 {
+  animation-delay: calc(30s / 11 * (11 - 6) * -1);
+}
+#item7 {
+  animation-delay: calc(30s / 11 * (11 - 7) * -1);
+}
+#item8 {
+  animation-delay: calc(30s / 11 * (11 - 8) * -1);
+}
+#item9 {
+  animation-delay: calc(30s / 11 * (11 - 9) * -1);
+}
+#item10 {
+  animation-delay: calc(30s / 11 * (11 - 10) * -1);
+}
+#item11 {
+  animation-delay: calc(30s / 11 * (11 - 11) * -1);
 }
 
 /* Skills CSS */
