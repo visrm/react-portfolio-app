@@ -1,9 +1,13 @@
+import { motion } from "framer-motion";
 import "./App.css";
-import pfp from "./assets/user_profile.jpg";
-import C_assg from "./assets/C-Assignments-thumb.png";
+import ProjectCard from "./components/ProjectCard";
+import ShuffleHero from "./components/Hero";
 import Weather_fc from "./assets/weather-app-thumb.png";
 import Digi_gui from "./assets/digilocker-guide-thumb.png";
-import ProjectCard from "./components/ProjectCard";
+import BMI_check from "./assets/BMI-checker-thumb.png";
+import JS_drum from "./assets/JS-drumKit-thumb.png";
+import Whack_mole from "./assets/whack-a-mole-thumb.png";
+import Anime_list from "./assets/Anime-list-thumb.png";
 
 export default function App() {
   return (
@@ -19,57 +23,44 @@ export default function App() {
                 <a href="#project-bg">Projects</a>
               </li>
               <li className="basis-1/2 font-medium text-sm sm:text-lg">
-                <a href="#contact">Contact</a>
+                <a href="#">About</a>
               </li>
             </ul>
           </nav>
         </header>
         <main>
-          <section className="hero min-h-[90vh] text-base-200">
-            <div className="hero-overlay bg-opacity-10" />
-            <article className="hero-content flex-col lg:flex-row mr-auto ml-auto">
-              <img
-                alt="PROFILE PIC"
-                className="w-2/5 sm:w-3/12 mt-14 sm:mt-0 rounded-full bg-contain shadow-black/50 shadow-2xl"
-                src={pfp}
-              />
-              <div className="p-1 sm:p-3">
-                <h1 className="sm:text-5xl text-3xl font-bold">
-                  {" "}
-                  Rahul Murali{" "}
-                  <span className="text-base sm:text-xl font-normal">
-                    <i>He/Him</i>
-                  </span>
-                  <span className="block font-normal text-base sm:text-2xl">
-                    Computer Applications Student at Calicut University
-                  </span>
-                </h1>
-                <p className="flex py-4 sm:py-6 text-sm sm:text-xl tracking-wide">
-                  This portfolio showcases Rahul's projects, where you'll see
-                  his problem-solving approach and ability to translate concepts
-                  into functional applications. He's a quick learner who thrives
-                  in collaborative environments and enjoys tackling challenges
-                  head-on.
-                </p>
-              </div>
-            </article>
-          </section>
+          <ShuffleHero/>
           <section className="h-full min-h-fit w-full max-w-full">
             <article className="p-4 overflow-hidden" id="projects">
               <ProjectCard
+                projImgSrc={BMI_check}
+                projTitle="BMI Checker Webapp"
+                projLink="https://bmi-calculator-topaz-mu.vercel.app/"
+              />
+              <ProjectCard
+                projImgSrc={Whack_mole}
+                projTitle="Javascript Whack-A-Mole webapp"
+                projLink="https://whack-a-mole-game-iota.vercel.app/"
+              />
+              <ProjectCard
+                projImgSrc={JS_drum}
+                projTitle="Javascript DrumKit"
+                projLink="https://js-drum-kit-two.vercel.app/"
+              />
+              <ProjectCard
                 projImgSrc={Weather_fc}
-                projTitle="A simple Javascript Weather Forecaster."
+                projTitle="Javascript Weather Forecaster"
                 projLink="https://weather-application-nine-theta.vercel.app/"
               />
               <ProjectCard
                 projImgSrc={Digi_gui}
-                projTitle="A beginner digiLocker guide webpage."
+                projTitle="Beginner digiLocker guide webpage"
                 projLink="https://digilocker-guide.vercel.app/"
               />
               <ProjectCard
-                projImgSrc={C_assg}
-                projTitle="list of basic C programs for uni CS purpose."
-                projLink="https://github.com/visrm/C-Assignments"
+                projImgSrc={Anime_list}
+                projTitle="Personal Animelist webpage"
+                projLink="https://anime-lists-c4tvo44bm-yvel-tal42-86.vercel.app/"
               />
             </article>
           </section>
@@ -78,7 +69,7 @@ export default function App() {
               <h2 className="mr-auto ml-auto p-2 sm:p-4 text-xl sm:text-2xl font-medium sm:tracking-wide uppercase">
                 Technical Skills
               </h2>
-              <div className="wrapper text-xs uppercase text-medium text-mono">
+              <div className="wrapper text-medium max-w-full">
                 <div className="item" id="item1">
                   <span>HTML</span>
                 </div>
@@ -113,26 +104,26 @@ export default function App() {
                   <span>JavaScript</span>
                 </div>
               </div>
-              <div className="skills-grid grid gap-4 sm:gap-6">
+              <div className="skills-grid grid gap-3 gap-x-6">
                 <article className="skills-grid-element">
-                  <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-lg tracking-wide">
+                  <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-base tracking-wide">
                     <span className="underline underline-offset-4">
                       Front-End Development
                     </span>
                   </h3>
-                  <p className="px-1 sm:px-2 font-light sm:text-base text-sm tracking-wide whitespace-normal min-w-fit">
+                  <p className="font-light text-xs sm:text-sm tracking-wide min-w-fit">
                     Proficient in HTML5, CSS (bootstrap, tailwind), JavaScript
                     and various Front-end frameworks for building responsive
                     user interfaces and interactive web experiences.
                   </p>
                 </article>
                 <article className="skills-grid-element">
-                  <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-lg tracking-wide">
+                  <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-base tracking-wide">
                     <span className="underline underline-offset-4">
                       Programming Languages
                     </span>
                   </h3>
-                  <p className="px-1 sm:px-2 font-light sm:text-base text-sm tracking-wide whitespace-normal min-w-fit">
+                  <p className="font-light text-xs sm:text-sm tracking-wide min-w-fit">
                     Strong understanding of programming fundamentals with
                     experience in object-oriented and procedural programming
                     languages, allowing for efficient problem-solving and code
@@ -140,71 +131,73 @@ export default function App() {
                   </p>
                 </article>
                 <article className="skills-grid-element">
-                  <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-lg tracking-wide">
+                  <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-base tracking-wide">
                     <span className="underline underline-offset-4">
                       Back-End Development
                     </span>
                   </h3>
-                  <p className="px-1 sm:px-2 font-light sm:text-base text-sm tracking-wide whitespace-normal min-w-fit">
+                  <p className="font-light text-xs sm:text-sm tracking-wide min-w-fit">
                     Strong foundation in backend development principles and
                     eager to learn and grow.
                   </p>
                 </article>
                 <article className="skills-grid-element">
-                  <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-lg tracking-wide">
-                    <span className="underline underline-offset-4">
-                      Database Management
-                    </span>
-                  </h3>
-                  <p className="px-1 sm:px-2 font-light sm:text-base text-sm tracking-wide whitespace-normal min-w-fit">
-                    A strong working knowledge of database design principles,
-                    data modeling and querying using SQL.
-                  </p>
-                </article>
-                <article className="skills-grid-element">
-                  <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-lg tracking-wide">
+                  <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-base tracking-wide">
                     <span className="underline underline-offset-4">
                       Version Control
                     </span>
                   </h3>
-                  <p className="px-1 sm:px-2 font-light sm:text-base text-sm tracking-wide whitespace-normal min-w-fit">
+                  <p className="font-light text-xs sm:text-sm tracking-wide min-w-fit">
                     Experience with Git for version control, collaboration and
                     code management, including branching, merging and conflict
                     resolution.
                   </p>
                 </article>
+                <article className="skills-grid-element">
+                  <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-base tracking-wide">
+                    <span className="underline underline-offset-4">
+                      Database Management
+                    </span>
+                  </h3>
+                  <p className="font-light text-xs sm:text-sm tracking-wide min-w-fit">
+                    A strong working knowledge of database design principles,
+                    data modeling and querying using SQL.
+                  </p>
+                </article>
               </div>
             </article>
           </section>
-          <section className="flex flex-col education max-w-full text-base-200 px-4 py-8 sm:p-8 sm:place-items-center gap-2 sm:gap-4">
-            <h2 className="block text-xl sm:text-2xl font-medium tracking-wide uppercase">
-              Educational Qualifications
-            </h2>
-            <article className="education-grid grid md:grid-cols-2 grid-cols-1 place-content-center gap-2">
-              <div className="p-2 sm:p-4 bg-white/5 rounded-md">
-                <p className="px-2 text-base sm:text-lg font-normal">
-                  University of Calicut
-                </p>
-                <p className="px-2 py-0 text-sm sm:text-base font-sans">
-                  Master of Computer Applications, IT
-                  <span className="block mx-auto text-xs sm:text-sm text-white/75">
-                    2023 - present
-                  </span>
-                </p>
-              </div>
-              <div className="p-2 sm:p-4 bg-white/5 rounded-md">
-                <p className="px-2 text-base sm:text-lg font-normal">
-                  University of Calicut
-                </p>
-                <p className="px-2 py-0 text-sm sm:text-base font-sans">
-                  Bachelor of Science, Mathematics
-                  <span className="block mx-auto text-xs sm:text-sm text-white/75">
-                    2020 - 2023
-                  </span>
-                </p>
-              </div>
-            </article>
-          </section>
+        </main>
+        <aside className="flex flex-col education max-w-full text-base-200 px-4 py-8 sm:p-5 sm:place-items-center">
+          <h2 className="block text-xl sm:text-xl font-medium tracking-wide uppercase underline underline-offset-4">
+            Educational Qualifications
+          </h2>
+          <article className="education-grid grid md:grid-cols-2 grid-cols-1 sm:p-4 gap-2">
+            <div className="p-2 sm:px-4 rounded-lg">
+              <p className="px-2 text-base font-normal">
+                University of Calicut
+              </p>
+              <p className="px-2 text-sm font-sans">
+                Master of Computer Applications, IT
+                <span className="block mx-auto text-xs sm:text-sm text-white/75">
+                  2023 - 2025
+                </span>
+              </p>
+            </div>
+            <div className="p-2 sm:px-4 rounded-lg">
+              <p className="px-2 text-base font-normal">
+                University of Calicut
+              </p>
+              <p className="px-2 text-sm font-sans">
+                Bachelor of Science, Mathematics
+                <span className="block mx-auto text-xs sm:text-sm text-white/75">
+                  2020 - 2023
+                </span>
+              </p>
+            </div>
+          </article>
+        </aside>
+        <footer>
           <section className="contacts flex bottom-0 px-1 sm:px-4 py-3 sm:py-4 flex-row flex-nowrap align-middle justify-evenly sm:gap-2">
             <h2
               className="p-2 sm:text-xl text-base font-medium sm:tracking-wide uppercase clear-right"
@@ -237,9 +230,11 @@ export default function App() {
               <div className="icons8-github" />
             </a>
           </section>
-        </main>
-        <footer className="flex w-full py-1 bottom-0 text-base-200">
-          <p className="block mr-auto ml-auto">© Copyright 2024 Rahul Murali</p>
+          <div className="flex w-full py-1 bottom-0 text-base-200">
+            <p className="block mr-auto ml-auto">
+              © Copyright 2024 Rahul Murali
+            </p>
+          </div>
         </footer>
       </div>
     </>
