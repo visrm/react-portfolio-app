@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import "./App.css";
 import ProjectCard from "./components/ProjectCard";
 import ShuffleHero from "./components/Hero";
@@ -60,7 +59,7 @@ export default function App() {
               <ProjectCard
                 projImgSrc={Anime_list}
                 projTitle="Personal Animelist webpage"
-                projLink="https://anime-lists-c4tvo44bm-yvel-tal42-86.vercel.app/"
+                projLink="https://anime-lists.vercel.app/"
               />
             </article>
           </section>
@@ -172,13 +171,13 @@ export default function App() {
           <h2 className="block text-xl sm:text-xl font-medium tracking-wide uppercase underline underline-offset-4">
             Educational Qualifications
           </h2>
-          <article className="education-grid grid md:grid-cols-2 grid-cols-1 sm:p-4 gap-2">
+          <article className="education-grid grid md:grid-cols-2 grid-cols-1 py-2 place-items-center">
             <div className="p-2 sm:px-4 rounded-lg">
               <p className="px-2 text-base font-normal">
                 University of Calicut
               </p>
               <p className="px-2 text-sm font-sans">
-                Master of Computer Applications, IT
+                Master of Computer Applications
                 <span className="block mx-auto text-xs sm:text-sm text-white/75">
                   2023 - 2025
                 </span>

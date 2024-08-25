@@ -417,7 +417,7 @@ img {
 .education {
   display: flex;
   min-height: fit-content;
-  background: rgba(255, 255, 255, 0.012);
+  background: rgba(255, 255, 255, 0.025);
  backdrop-filter: blur(12px);
 }
 
