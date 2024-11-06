@@ -3,12 +3,20 @@ import { useEffect, useRef, useState } from "react";
 import pfp from "../assets/user_profile.jpg";
 
 export default function Hero() {
+  // window.onload = () => {
+  //   const element = document.getElementById("shuffleGrid");
+  //   const rect = element.getBoundingClientRect();
+
+  //   console.log(rect.top); // Distance from the top of the viewport
+  //   console.log(rect.left); // Distance from the left of the viewport
+  // };
+
   return (
     <>
       <section className="hero relative p-0 min-h-[80vh] md:min-h-[100vh] h-full w-full text-base-200 flex flex-col sm:flex-row flex-nowrap justify-start overflow-hidden">
         <article className="max-w-full md:w-10/12">
           <div className="hero-overlay bg-blend-overlay" />
-          <div className="hero-content flex-col lg:flex-row flex-nowrap justify-start mx-auto md:m-5">
+          <div className="hero-content flex-col h-full lg:flex-row flex-nowrap justify-start mx-auto md:m-5">
             <img
               alt="PROFILE PIC"
               className="w-2/5 sm:w-3/12 mt-14 sm:mt-0 rounded-full bg-contain shadow-black/50 shadow-2xl"
@@ -16,13 +24,12 @@ export default function Hero() {
             />
             <div className="p-1 sm:p-2 relative">
               <h1 className="sm:text-7xl text-3xl font-bold">
-                {" "}
-                Rahul Murali{" "}
+                Rahul Murali
                 <span className="text-base sm:text-lg font-normal">
                   <i>He/Him</i>
                 </span>
               </h1>
-              <p className="flex absolute -bottom-full py-4 sm:py-2 mx-auto max-w-[32rem] text-xs text-white/50 font-light tracking-wide">
+              <p className="flex py-4 sm:py-2 mx-auto max-w-[32rem] text-xs text-white/50 font-light tracking-wide">
                 This portfolio showcases Rahul's projects, where you'll see his
                 problem-solving approach and ability to translate concepts into
                 functional applications.
@@ -30,7 +37,10 @@ export default function Hero() {
             </div>
           </div>
         </article>
-        <article className="w-full min-h-full hidden md:block md:w-4/12 md:absolute md:left-[59rem] md:top-20">
+        <article
+          id="shuffleGrid"
+          className="w-full min-h-full hidden md:block md:w-4/12 md:absolute md:right-[-10rem] md:top-20"
+        >
           <ShuffleGrid />
         </article>
       </section>
