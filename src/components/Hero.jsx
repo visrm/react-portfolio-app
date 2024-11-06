@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import pfp from "../assets/user_profile.jpg";
 
-export default function Hero () {
+export default function Hero() {
   return (
     <>
       <section className="hero relative p-0 min-h-[80vh] md:min-h-[100vh] h-full w-full text-base-200 flex flex-col sm:flex-row flex-nowrap justify-start overflow-hidden">
@@ -142,16 +142,16 @@ const ShuffleGrid = () => {
   const [squares, setSquares] = useState(generateSquares());
 
   useEffect(() => {
+    const shuffleSquares = () => {
+      setSquares(generateSquares());
+
+      timeoutRef.current = setTimeout(shuffleSquares, 3000);
+    };
+
     shuffleSquares();
 
     return () => clearTimeout(timeoutRef.current);
-  });
-
-  const shuffleSquares = () => {
-    setSquares(generateSquares());
-
-    timeoutRef.current = setTimeout(shuffleSquares, 3000);
-  };
+  }, []);
 
   return (
     <div className="grid md:grid-flow-col grid-cols-6 md:grid-cols-4 md:grid-rows-4 grid-rows-3 min-h-[100px] md:min-h-[490px] gap-1">
