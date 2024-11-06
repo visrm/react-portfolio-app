@@ -21,9 +21,9 @@ const App = () => {
               <li className="basis-1/2 font-medium text-sm sm:text-lg">
                 <a href="#project-bg">Projects</a>
               </li>
-              <li className="basis-1/2 font-medium text-sm sm:text-lg">
-                <a href="#">About</a>
-              </li>
+              {/* <li className="basis-1/2 font-medium text-sm sm:text-lg">
+                <a>About</a>
+              </li> */}
             </ul>
           </nav>
         </header>
