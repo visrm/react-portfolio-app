@@ -8,7 +8,7 @@ import JS_drum from "./assets/JS-drumKit-thumb.png";
 import Whack_mole from "./assets/whack-a-mole-thumb.png";
 import Anime_list from "./assets/Anime-list-thumb.png";
 
-export default function App() {
+const App = () => {
   return (
     <>
       <div className="App">
@@ -239,3 +239,5 @@ export default function App() {
     </>
   );
 }
+
+export default App;
