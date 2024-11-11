@@ -3,7 +3,7 @@
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Platypi:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@100..900&display=swap");
 
-.App {
+.Home {
   text-align: center;
 }
 
@@ -425,8 +425,7 @@ img {
 
 .contacts {
   text-decoration: none;
-  color: #000000;
-  background-color: #616161;
+  /* background-color: #616161; */
 }
 
 .icons8-linkedin {

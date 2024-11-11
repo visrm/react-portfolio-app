@@ -3,14 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import pfp from "../assets/user_profile.jpg";
 
 export default function Hero() {
-  // window.onload = () => {
-  //   const element = document.getElementById("shuffleGrid");
-  //   const rect = element.getBoundingClientRect();
-
-  //   console.log(rect.top); // Distance from the top of the viewport
-  //   console.log(rect.left); // Distance from the left of the viewport
-  // };
-
   return (
     <>
       <section className="hero relative p-0 min-h-[80vh] md:min-h-[100vh] h-full w-full text-base-200 flex flex-col sm:flex-row flex-nowrap justify-start overflow-hidden">
@@ -47,6 +39,7 @@ export default function Hero() {
     </>
   );
 }
+
 
 const shuffle = (array) => {
   let currentIndex = array.length,
