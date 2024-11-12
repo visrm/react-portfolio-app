@@ -7,14 +7,10 @@ import JS_drum from "../assets/JS-drumKit-thumb.png";
 import Whack_mole from "../assets/whack-a-mole-thumb.png";
 import Anime_list from "../assets/Anime-list-thumb.png";
 import Quick_quiz from "../assets/Quick-quiz-thumbnail.png";
-import Header from "./Header";
-import Footer from "./Footer";
 
 const Projects = () => {
   return (
     <>
-      <Header />
-      <br />
       <section className="h-full min-h-fit w-full max-w-full">
         <article className="p-4 overflow-hidden" id="projects">
           <ProjectCard
@@ -54,7 +50,6 @@ const Projects = () => {
           />
         </article>
       </section>
-      <Footer />
     </>
   );
 };

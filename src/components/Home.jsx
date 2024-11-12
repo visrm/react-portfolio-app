@@ -2,19 +2,21 @@ import "../App.css";
 import Footer from "./Footer";
 import Header from "./Header";
 import Hero from "./Hero";
+import Projects from "./Projects";
 import Skills from "./Skills";
-
 
 const Home = () => {
   return (
     <>
       <div className="Home">
         <Header />
+        <br />
         <main>
           <Hero />
+          <Projects />
           <Skills />
         </main>
-        <aside className="flex flex-col education max-w-full text-base-200 px-4 py-8 sm:p-5 sm:place-items-center">
+        {/* <aside className="flex flex-col education max-w-full text-base-200 px-4 py-8 sm:p-5 sm:place-items-center">
           <h2 className="block text-xl sm:text-xl font-medium tracking-wide uppercase underline underline-offset-4">
             Educational Qualifications
           </h2>
@@ -42,7 +44,7 @@ const Home = () => {
               </p>
             </div>
           </article>
-        </aside>
+        </aside> */}
         <Footer />
       </div>
     </>

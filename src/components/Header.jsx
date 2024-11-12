@@ -7,14 +7,11 @@ const Header = () => {
         Portfolio
       </p>
       <nav className="flex p-2 h-16">
-        <ul className="z-[1] max-w-full mx-4 grid grid-flow-col gap-4 sm:gap-3 items-center list-none">
-          <li className="font-medium text-sm sm:text-base">
+        <ul className="z-[1] max-w-full mx-4 grid grid-flow-col gap-4 sm:gap-6 lg:gap-8 font-medium font-serif leading-relaxed items-center list-none">
+          <li className="block text-sm sm:text-base">
             <Link to="/">Home</Link>
           </li>
-          <li className="font-medium text-sm sm:text-base">
-            <Link to="/projects">Projects</Link>
-          </li>
-          <li className="font-medium text-sm sm:text-base">
+          <li className="block text-sm sm:text-base">
             <Link to="/about-me">About</Link>
           </li>
 

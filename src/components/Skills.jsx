@@ -11,58 +11,58 @@ const Skills = () => {
         <SkillsMarquee />
         <div className="skills-grid grid gap-3 gap-x-6">
           <article className="skills-grid-element">
-            <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-base tracking-wide">
+            <h3 className="uppercase font-medium font-sans text-sm tracking-wide">
               <span className="underline underline-offset-4">
                 Front-End Development
               </span>
             </h3>
-            <p className="font-light text-xs sm:text-sm tracking-wide min-w-fit">
+            <p className="font-light font-sans text-sm tracking-wide min-w-fit">
               Proficient in HTML5, CSS (bootstrap, tailwind), JavaScript and
               various Front-end frameworks for building responsive user
               interfaces and interactive web experiences.
             </p>
           </article>
           <article className="skills-grid-element">
-            <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-base tracking-wide">
+            <h3 className="uppercase font-medium font-sans text-sm tracking-wide">
               <span className="underline underline-offset-4">
                 Programming Languages
               </span>
             </h3>
-            <p className="font-light text-xs sm:text-sm tracking-wide min-w-fit">
+            <p className="font-light font-sans text-sm tracking-wide min-w-fit">
               Strong understanding of programming fundamentals with experience
               in object-oriented and procedural programming languages, allowing
               for efficient problem-solving and code maintainability.
             </p>
           </article>
           <article className="skills-grid-element">
-            <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-base tracking-wide">
+            <h3 className="uppercase font-medium font-sans text-sm tracking-wide">
               <span className="underline underline-offset-4">
                 Back-End Development
               </span>
             </h3>
-            <p className="font-light text-xs sm:text-sm tracking-wide min-w-fit">
+            <p className="font-light font-sans text-sm tracking-wide min-w-fit">
               Strong foundation in backend development principles and eager to
               learn and grow.
             </p>
           </article>
           <article className="skills-grid-element">
-            <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-base tracking-wide">
+            <h3 className="uppercase font-medium font-sans text-sm tracking-wide">
               <span className="underline underline-offset-4">
                 Version Control
               </span>
             </h3>
-            <p className="font-light text-xs sm:text-sm tracking-wide min-w-fit">
+            <p className="font-light font-sans text-sm tracking-wide min-w-fit">
               Experience with Git for version control, collaboration and code
               management, including branching, merging and conflict resolution.
             </p>
           </article>
           <article className="skills-grid-element">
-            <h3 className="p-1 sm:px-2 sm:py-1 uppercase font-medium font-sans text-base tracking-wide">
+            <h3 className="uppercase font-medium font-sans text-sm tracking-wide">
               <span className="underline underline-offset-4">
                 Database Management
               </span>
             </h3>
-            <p className="font-light text-xs sm:text-sm tracking-wide min-w-fit">
+            <p className="font-light font-sans text-sm tracking-wide min-w-fit">
               A strong working knowledge of database design principles, data
               modeling and querying using SQL.
             </p>
