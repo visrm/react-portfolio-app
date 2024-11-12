@@ -7,15 +7,15 @@ const AboutMe = () => {
     <>
       <Header />
       <section className="py-12">
-        <div className="max-w-5xl mx-auto p-4 sm:p-6 lg:p-8">
+        <div className="max-w-4xl mx-auto p-4 sm:p-6 lg:p-8">
           <article className="text-center">
-            <h2 className="mt-4 text-3xl font-bold text-base-200">
+            <h2 className="mt-4 text-xl sm:text-3xl font-semibold text-base-200">
               Rahul Murali
             </h2>
-            <p className="mb-6 text-xl text-base-100 font-sans">
+            <p className="mb-6 text-lg sm:text-xl text-base-100 font-mono">
               Front-End Developer
             </p>
-            <div className="contacts flex bg-[#fff]/10 p-1 sm:px-4 sm:py-4 flex-row flex-nowrap align-middle justify-evenly sm:gap-2">
+            {/* <div className="contacts flex bg-[#fff]/10 p-1 sm:px-4 sm:py-4 flex-row flex-nowrap align-middle justify-evenly sm:gap-2">
               <a href="mailto:yveltal4286@gmail.com" rel="noopener noreferrer">
                 <div className="icons8-gmail" />
               </a>
@@ -33,12 +33,15 @@ const AboutMe = () => {
               >
                 <div className="icons8-github" />
               </a>
-            </div>
+            </div> */}
           </article>
-          <article className="mt-8 text-lg p-1 text-base-200 leading-relaxed">
+          <article className="block mt-8 mx-auto text-sm sm:text-lg text-base-300 leading-relaxed">
             <p>
               Hello! My name is Rahul Murali, and I'm a software engineer with a
-              passion for building innovative and user-friendly applications.
+              passion for building innovative and user-friendly applications. I
+              have a strong interest in Web Development, UI/UX Design and Data
+              Visualisation. I'm constantly driven to learn new technologies and
+              pushing my programming skills to bring innovative ideas to life.
             </p>
             <p className="mt-4">
               With over a year of experience in the industry, I have worked on a

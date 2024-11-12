@@ -14,14 +14,15 @@ export default function Hero() {
               className="w-2/5 sm:w-3/12 mt-14 sm:mt-0 rounded-full bg-contain shadow-black/50 shadow-2xl"
               src={pfp}
             />
-            <div className="p-1 sm:p-2 relative">
-              <h1 className="sm:text-7xl text-3xl font-bold">
-                Rahul Murali
-                <span className="text-base sm:text-lg font-normal">
-                  <i>He/Him</i>
-                </span>
-              </h1>
-              <p className="flex py-4 sm:py-2 mx-auto max-w-[32rem] text-xs text-white/50 font-light tracking-wide">
+            <div className="p-1 sm:p-2 relative text-left">
+              <p className="flex max-w-[32rem] text-xs text-emerald-700 font-mono font-bold tracking-wide">
+                Hello! I am..
+              </p>
+              <hgroup>
+               <h1 className="sm:text-7xl text-2xl font-semibold">Rahul Murali</h1> 
+               <h4 className="sm:text-5xl text-xl mb-4 font-semibold text-white/50">I develop websites and web applications.</h4>
+              </hgroup>
+              <p className="flex py-4 sm:py-2 max-w-[32rem] text-xs text-white/50 font-light tracking-wide">
                 This portfolio showcases Rahul's projects, where you'll see his
                 problem-solving approach and ability to translate concepts into
                 functional applications.
@@ -39,7 +40,6 @@ export default function Hero() {
     </>
   );
 }
-
 
 const shuffle = (array) => {
   let currentIndex = array.length,
